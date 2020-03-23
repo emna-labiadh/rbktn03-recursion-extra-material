@@ -82,9 +82,26 @@ function repeatString(str,count) {
 //  sum(2, 7); // => 2 + 3 + 4 + 5 + 6 + 7 => 27
 //  sum(3, 5); // => 3 + 4 + 5 => 12
 // What happens if start is larger than end? Modify sum to check for this case and, when found, swap the start and end arguments.
-
+   function sum(start,end) {
+   	if (start>end) {
+   		return sum(end,start)
+   	}
+    else if (start===end) {
+    	return start
+    }
+        return start + sum(end, start+1)
+   }
+      	
 // 2.Write a function product that works like sum, except it should compute the product of the numbers from start to end.
-
+    function product(start,end) {
+    	if (start>end) {
+    		return product(end,start)
+    	}
+        else if (start===end) {
+        	return start 
+        }
+            return start*product(end, start+1)
+     }
 // Refactor your sum function from earlier to be implemented in terms of product.
 
 // 3.Let's pretend that JavaScript does not have the addition operator + -- instead, it comes with two functions called inc and dec that perform increment and decrement respectively:
@@ -100,9 +117,21 @@ function repeatString(str,count) {
 //  The catch is that you can only use inc and dec to accomplish this.
 
 // 4.Write a function called isEven that, given a number n as a parameter, returns true if that number is even, and false otherwise; however, you need to do this without using the % operator
-
+         function isEven(n) {
+         	if(n == 0) {
+         	 return true 
+         } else if(n == 1){
+         	 return false
+         }else if (n < 0) {
+         	 return isEven(-n)
+         }else {
+         	 return isEven(n-2)
+      }
+       }
 // 5.Write a function called multiply that accepts two numbers as parameters, and multiplies them together -- but without using the * operator; instead, you'll need to use repeated addition.
-
+      function multiplay(a,b) {
+      	   return a multiplayby b
+      }
 // 6.Write a JavaScript program to get the integers in range (x, y)
 
 //  range(1,9)   => '2, 3, 4, 5, 6, 7, 8'
