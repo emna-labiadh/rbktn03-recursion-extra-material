@@ -129,11 +129,18 @@ function repeatString(str,count) {
       }
        }
 // 5.Write a function called multiply that accepts two numbers as parameters, and multiplies them together -- but without using the * operator; instead, you'll need to use repeated addition.
-      function multiplay(a,b) {
-      	   return a multiplayby b
-      }
+      
+      	  
+      
 // 6.Write a JavaScript program to get the integers in range (x, y)
-
+      function range(x, y) {
+      	if(x-1) {
+      		return x
+      	} else if (y-1) {
+         return y
+      }
+      return x-range(x, y+1)
+}
 //  range(1,9)   => '2, 3, 4, 5, 6, 7, 8'
 //  range(21,33) => '22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32'
 // Read about Increment and Decrement operators in JS
@@ -165,7 +172,11 @@ function repeatString(str,count) {
 //  'hello'[0]; // => 'h'
 //  'dog'[0]; // => 'd'
 // HINT: You'll also need to make use of the slice method as shown above in the exercise on computing the length of a string.
-
+ function countChars(str, character) {
+ 	if (str===0) {
+ 		return character
+ 	}
+ }
 // 4. Implement a function called indexOf that accepts two parameters: a string and a character, and returns the first index of character in the string. You'll need to make use of the techniques for accessing the first element of a string and the rest of the string (slice) as before.
 
 // 5.The power function in the lecture works, but can be made considerably faster through a method known as successive squaring. To get an idea of how this works, observe that:
@@ -173,7 +184,7 @@ function repeatString(str,count) {
 // Modify the power function to take advantage of this technique.
 
 // 6.Write function called reverse that take a string and return the revers string
-
+   
 //  reverse( 'Fatima' ) => 'amitaF'
 //  reverse( 'this could be an easy question ' ) =>
 //  'noitseuq ysae na eb dluoc siht'.
