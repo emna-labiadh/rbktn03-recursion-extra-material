@@ -23,12 +23,12 @@
 //  factorial(3); // => 3 * 2 * 1 => 6
 //  factorial(4); // => 4 * 3 * 2 * 1 => 24
 //  factorial(5); // => 5 * 4 * 3 * 2 * 1 => 120
-// Implement the factorial function by observing that the 'factorial of n' can be rephrased as 'n times the factorial of n - 1'.
+// Implement the factorial function by observing that the 'factorial of n' cfunction repeatString(str,count) {
    function factorial(n) {
-   	  if(n===1) {
-   	  	return 1
-   	  }
-      return n*factorial(n-1)
+   	if (n===1) {
+   		return 1
+   	}
+    return n*factorial(n-1)
    }
 // 3.Repeating a String n Times: Let's write a function called repeatString that takes two parameters: a string str, which is the string to be repeated, and count -- a number representing how many times the string str should be repeated, e.g.
 
@@ -43,7 +43,12 @@
 //  we can concatenate that string onto the result of repeating the string count - 1.
 //  HINT: Observe that repeatString('dog', 0) should yield the empty string, ''.
 //  What happens if you evaluate this: ' ' + 'dog'?
-
+function repeatString(str,count) {
+          if(count===0) {
+            return ""
+        }
+            return str+repeatString(str,count-1);
+       }
 // 4.Compute the nth Fibonacci Number: The fibonacci numbers are represented by the following sequence:
 
 //  // fib(n): 1 1 2 3 5 8 13 21
@@ -63,7 +68,12 @@
 //  multiplyBy10(4,3) => 4000
 //  multiplyBy10(5,2) => 500
 // ------------------------- More Practice -------------------------
-
+    function multiplyBy10(number, n) {
+    	if (n*number) {
+    	  return multiplyBy10
+    	}
+          return number*multiplyBy10(number, n-1)
+    }
 // 1.Modify your sum function from the Basic Requirements section to accept two parameters, start and end: sum should now compute the sum of the numbers from start to end, e.g.
 
 //  function sum(start, end) {
