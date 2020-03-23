@@ -68,11 +68,11 @@ function repeatString(str,count) {
 //  multiplyBy10(4,3) => 4000
 //  multiplyBy10(5,2) => 500
 // ------------------------- More Practice -------------------------
-    function multiplyBy10(number, n) {
-    	if (n*number) {
-    	  return multiplyBy10
+    function multiplyBy10(num, time) {
+    	if (time===0) {
+    	  return num
     	}
-          return number*multiplyBy10(number, n-1)
+          return 10*multiplyBy10(num, time-1)
     }
 // 1.Modify your sum function from the Basic Requirements section to accept two parameters, start and end: sum should now compute the sum of the numbers from start to end, e.g.
 
