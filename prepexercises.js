@@ -129,7 +129,12 @@ function repeatString(str,count) {
       }
        }
 // 5.Write a function called multiply that accepts two numbers as parameters, and multiplies them together -- but without using the * operator; instead, you'll need to use repeated addition.
-      
+     function multiply(a, b) {
+     	if(a === 0 || b === 0) {
+     		return 0
+     	}
+           return a + multiply(a, b-1)
+     } 
       	  
       
 // 6.Write a JavaScript program to get the integers in range (x, y)
