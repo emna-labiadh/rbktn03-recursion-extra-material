@@ -158,7 +158,9 @@ function repeatString(str,count) {
 //  //  | | | | |
 //  //  0 1 2 3 4
 //  The 'h' character has index (position) 0 in the string 'hello', 'e' has index 1, 'l' has index 2, etc.
-
+  function stringLangth(str) {
+  	 return str.slice
+  }
 // 2.The 'modulo' operator (%) computes the remainder after dividing its left operand by its right one, e.g.
 
 //  5 % 2; // => 1
@@ -188,6 +190,7 @@ function repeatString(str,count) {
 //  reverse( 'Fatima' ) => 'amitaF'
 //  reverse( 'this could be an easy question ' ) =>
 //  'noitseuq ysae na eb dluoc siht'.
+  
 
 // 7.Find the greatest common divisor of two numbers.
 
